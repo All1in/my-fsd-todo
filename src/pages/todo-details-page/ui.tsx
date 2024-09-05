@@ -16,6 +16,7 @@ export const TodoDetailsPage = observer(() => {
         if (id) {
             getTask(id);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
     return (

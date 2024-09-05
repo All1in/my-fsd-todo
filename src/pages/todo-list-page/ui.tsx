@@ -1,5 +1,6 @@
 import { Result, Space, Spin } from "antd";
-import { TaskRow, taskModel } from "entities/task";
+import { taskModel } from "entities/task";
+import { TaskRow } from "entities/task/ui/task-row";
 import { TaskFilter } from "features/task-filter";
 import { ToggleTask } from "features/toggle-task";
 import { observer } from "mobx-react-lite";
