@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# 🚀 Feature-Sliced Design Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and scalable **TODO** app built using **Feature-Sliced Design (FSD)** architecture. The project is powered by **React** with **MobX** for state management, **TypeScript** for type safety, and **Vite** for lightning-fast development.
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: A JavaScript library for building user interfaces.
+- **MobX**: Simple, scalable state management using observables.
+- **TypeScript**: Superset of JavaScript for static typing.
+- **Vite**: A fast build tool for optimized performance.
 
-## Expanding the ESLint configuration
+## 📂 Project Structure (Feature-Sliced Design)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![Feature-Sliced Design Architecture](https://miro.medium.com/v2/resize:fit:1400/1*XNbZ3dfdLYRdKw8Gl4ClTA.jpeg)
 
-- Configure the top-level `parserOptions` property like this:
+The **Feature-Sliced Design (FSD)** is the core of this project. It introduces a modular, scalable approach for organizing the app, allowing for better separation of concerns, maintainability, and easier collaboration.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+In **FSD**, the app is divided into independent layers and feature modules that encourage reuse and better control over the business logic.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Key Benefits of FSD
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clear Separation of Concerns**:
+    - Each feature is self-contained and isolated from others, making it easier to track the flow of data.
+    - Developers work within clearly defined layers (`app`, `processes`, `pages`, `features`, `entities`, `shared`) that encapsulate specific roles and responsibilities.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Scalability**:
+    - As the app grows, new features can be added independently without affecting the rest of the system.
+    - Each feature is a module, promoting reusability across different parts of the app.
+
+3. **Improved Maintainability**:
+    - Features are self-contained and encapsulated, making it easier to update or refactor without breaking other parts of the system.
+
+4. **Optimized for Collaboration**:
+    - The clear modular structure makes it easy for teams to work on different features without conflicts.
+    - Encourages vertical slicing of features, where each feature is developed from front-end UI to business logic in isolation.
+
+---
+
+
+## 🛠️ Installation and Setup
+
+### Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- **Node.js** (v14 or higher)
+- **npm** or **yarn**
+
+### Clone the Repository
+
+Start by cloning the repository from GitHub:
+
+```bash
+git clone https://github.com/All1in/my-fsd-todo.git
